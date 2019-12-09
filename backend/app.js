@@ -29,15 +29,15 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, '~/GamerLobby')));
-app.use('/', express.static(path.join(__dirname, '~/GamerLobby')));
+app.use(express.static(path.join(__dirname, 'dist/GamerLobby')));
+app.use('/', express.static(path.join(__dirname, 'dist/GamerLobby')));
 app.use('/api', router)
 app.use('/api/players', playerRoute)
 app.use('/api/games', gameRoute)
 
 // Create port
 
-MONGOLAB_URI="mongodb+srv://harman2:Mongodb16@cluster0-hyur7.mongodb.net/GamerLobby"
+//MONGOLAB_URI="mongodb+srv://harman2:Mongodb16@cluster0-hyur7.mongodb.net/GamerLobby"
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
