@@ -38,7 +38,7 @@ app.use('/api/games', gameRoute)
 // Create port
 
 MONGOLAB_URI="mongodb+srv://harman2:Mongodb16@cluster0-hyur7.mongodb.net/GamerLobby"
-const port = process.env.MONGOLAB_URI || 4000;
+const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
