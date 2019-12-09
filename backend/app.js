@@ -29,8 +29,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'index.html')));
-app.use('/', express.static(path.join(__dirname, 'index.html')));
+app.use(express.static(path.join(__dirname, '~/GamerLobby')));
+app.use('/', express.static(path.join(__dirname, '~/GamerLobby')));
 app.use('/api', router)
 app.use('/api/players', playerRoute)
 app.use('/api/games', gameRoute)
