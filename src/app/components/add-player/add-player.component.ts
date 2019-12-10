@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-add-player',
   templateUrl: './add-player.component.html',
@@ -41,12 +42,12 @@ export class AddPlayerComponent implements OnInit {
     private gameApi: ApiService,
     private actRoute: ActivatedRoute
   ) { 
-     this.gameApi.GetGames().subscribe((data => {
-      console.log(data)
+     this.gameApi.GetGames().subscribe(data => {
+      console.log(data);
      
       this.GamesList = data;
         
-     }))
+     })
   }
 
   /* Reactive book form */

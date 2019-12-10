@@ -53,7 +53,6 @@ export class EditGameComponent implements OnInit {
     })
     this.gameApi.GetGames().subscribe((data => {
       console.log(data)
-     
       this.GamesList = data;
     }))    
   }

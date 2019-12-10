@@ -20,17 +20,21 @@ mongoose.connect(dataBaseConfig.db, {
 )
 
 // Set up express js port
-const playerRoute = require('../backend/routes/player.route')
-const gameRoute = require('../backend/routes/game.route')
-const router = require('../backend/routes/auth.routes')
+// const playerRoute = require('../backend/routes/player.route')
+// const gameRoute = require('../backend/routes/game.route')
+// const router = require('../backend/routes/auth.routes')
+
+const playerRoute = require('./routes/player.route')
+const gameRoute = require('./routes/game.route')
+const router = require('./routes/auth.routes')
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'dist/GamerLobby')));
-app.use('/', express.static(path.join(__dirname, 'dist/GamerLobby')));
+app.use(express.static(path.join(__dirname, '/dist/GamerLobby')));
+app.use('/', express.static(path.join(__dirname, '/dist/GamerLobby')));
 app.use('/api', router)
 app.use('/api/players', playerRoute)
 app.use('/api/games', gameRoute)
