@@ -42,12 +42,12 @@ export class AddPlayerComponent implements OnInit {
     private gameApi: ApiService,
     private actRoute: ActivatedRoute
   ) { 
-     this.gameApi.GetGames().subscribe((data => {
+     this.gameApi.GetGames().subscribe(data => {
       console.log(data)
      
       this.GamesList = data;
         
-     }))
+     })
   }
 
   /* Reactive book form */
