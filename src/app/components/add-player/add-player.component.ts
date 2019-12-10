@@ -43,7 +43,7 @@ export class AddPlayerComponent implements OnInit {
     private actRoute: ActivatedRoute
   ) { 
      this.gameApi.GetGames().subscribe(data => {
-      console.log(data)
+      console.log(data);
      
       this.GamesList = data;
         
