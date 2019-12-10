@@ -86,7 +86,7 @@
               <mat-form-field>
                   <mat-select  [(value)]="selectedGames" formControlName="gamesAvailable">
                       <div *ngFor="let game of GamesList; let i = index">
-                      <mat-option *ngIf="GamesList[i].status == 'available'" [value]="GamesList[i].game_title">{{GamesList[i].game_title}}
+                      <mat-option *ngIf="GamesList[i].status == 'Available'" [value]="GamesList[i].game_title">{{GamesList[i].game_title}}
                       </mat-option>
                       </div>
                   </mat-select>
